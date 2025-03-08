@@ -38,6 +38,7 @@ const Works = () => {
                 <h3> {item?.title}</h3>
                 <p>{item.description}</p>
                 <div
+                  className="responsive"
                   style={{display: "flex", flexDirection: "row", gap: "30px"}}
                 >
                   {item?.buttons?.map((btn, btn_index) => (

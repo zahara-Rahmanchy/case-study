@@ -166,6 +166,8 @@ h6 {
 .card {
   gap: 32px;
   display: flex;
+  justify-content: space-evenly;
+  align-items: center;
   /* background-color: red; */
   /* justify-content: space-between; */
 }
@@ -230,9 +232,9 @@ h6 {
   border-radius: 24px;
   object-fit: cover;
 }
-.blog-details-div {
-  /* flex: 1; */
-}
+/* .blog-details-div {
+  /* flex: 1; 
+} */
 .blog-details-div h3 {
   font-weight: 600;
   font-size: 40px;
@@ -241,9 +243,155 @@ h6 {
   padding: 0;
   /* line-height: 100%; */
 }
+.testimonial-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 20px;
+  align-items: center;
+  /* text-align: center; */
+}
+.reviewer {
+  width: 80%;
+  display: flex;
+  gap: 15px;
+  align-items: flex-start;
+  justify-content: flex-start;
+}
+.testimonial-slide h4 {
+  overflow-wrap: break-word;
+  margin-bottom: 10px;
+  font-weight: 600;
+  font-size: 24px;
+  line-height: 32px;
+}
+
+.testimonial-slide h5 {
+  width: 5rem;
+  /* width: 80%; */
+  margin: 5px 0;
+  font-size: 32px;
+}
+
+.reviewer img {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+}
+.testimonial-slide span {
+  color: gray;
+  font-size: 14px;
+}
+.slider-buttons {
+  margin-left: 20px;
+}
+.slider-buttons button {
+  /* float: left; */
+  /* background-color: #ccc; */
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  margin: 5px;
+  cursor: pointer;
+}
+.active,
+.slider-buttons button:hover,
+.slider-buttons button:active {
+  background-color: white;
+}
+
+/* ----- FAQ */
+.accordion-item {
+  border-bottom: 1px solid #ccc;
+  padding: 10px 0;
+}
+
+.accordion-question {
+  width: 100%;
+  background: none;
+  border: none;
+  font-size: 18px;
+  font-weight: bold;
+  text-align: left;
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.accordion-answer {
+  padding: 10px;
+  font-size: 16px;
+  color: #ccc;
+}
+
+.arrow {
+  font-size: 16px;
+  margin-left: 10px;
+}
+
+/* footer */
+.footer {
+  width: 100%;
+  display: flex; /* Ensure the footer itself is a flex container */
+  flex-wrap: wrap; /* Allow wrapping if necessary */
+  justify-content: center; /* Center the content horizontally */
+}
+
+.text-design-container {
+  display: flex; /* Flexbox for text and image */
+  flex-direction: row; /* Ensure they are in a row */
+  justify-content: space-between; /* Space out items within the container */
+  align-items: center; /* Vertically center the text and image */
+  gap: 10px;
+  margin: 10px; /* Add some space between items */
+}
+
+.text-design {
+  font-family: Syne;
+  font-weight: 700;
+  font-size: 45px;
+  line-height: 88px;
+  letter-spacing: 0%;
+  color: transparent; /* Makes the fill transparent */
+  -webkit-text-stroke: 2px #cbcbcb; /* Outline text */
+}
+.footer h1 {
+  text-align: center;
+  font-weight: 800;
+  font-size: 64px;
+  line-height: 80px;
+  letter-spacing: 0%;
+  text-transform: uppercase;
+}
+.footer .bottom-tags {
+  width: 100%;
+  max-width: 1200px;
+  /* background-color: antiquewhite; */
+  position: absolute;
+  margin: auto;
+  left: 0;
+  right: 0;
+  bottom: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.bottom-tags ul {
+  list-style: none;
+  display: flex;
+  gap: 10px;
+}
 @media (max-width: 768px) {
   .content {
-    padding: auto;
+    padding: 5px;
+    /* width: 100%; */
+  }
+  .title {
+    justify-content: center;
+    text-align: center;
   }
   .navbar {
     flex-direction: column;
@@ -255,17 +403,65 @@ h6 {
   .banner-section-2 {
     flex-direction: column;
   }
+  .banner-section-2 p {
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
   .expertise-list {
     grid-template-columns: repeat(1, 1fr);
   }
+  .card-container {
+    display: flex;
+    height: max-content;
+    /* margin: 0; */
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+  }
   .card {
     flex-direction: column;
-    height: fit-content;
+    height: max-content;
   }
   .card img {
     width: 100%;
+    height: fit-content;
   }
+  .responsive {
+    margin-bottom: 15px;
+  }
+  .expertise-grid {
+    text-align: center;
+  }
+  .experience-div {
+    flex-direction: column;
+
+    justify-content: space-between;
+    align-items: center;
+  }
+  .blog-div,
+  .blog-details-div {
+    grid-template-columns: 1fr;
+    justify-items: center;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .blog-details-div h3 {
+    /* margin-left: 5px; */
+    text-align: center;
+  }
+  /* .text-design-container {
+    flex-direction: column;
+  } */
   br {
     display: none;
+  }
+  .testimonial-slide {
+    flex-direction: column;
+  }
+  .bottom-tags {
+    flex-direction: column;
   }
 }
