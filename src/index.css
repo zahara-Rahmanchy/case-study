@@ -1,0 +1,112 @@
+@import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Syne:wght@400..800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grechen+Fuemen&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Syne:wght@400..800&display=swap");
+
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif; /* Default font */
+  background-color: #000;
+  color: white;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Syne", sans-serif;
+  font-weight: 700;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 50px;
+  background-color: black;
+  /* border-bottom: 1px solid gray; */
+}
+
+.logo {
+  font-size: 24px;
+  width: 45px;
+  height: 32px;
+}
+
+.nav-links {
+  list-style: none;
+
+  display: flex;
+
+  justify-content: space-evenly;
+  gap: 40px;
+}
+
+.nav-links li a {
+  text-decoration: none;
+  color: white;
+  padding: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "Syne", sans-serif; /* Keep Poppins for body */
+}
+.nav-links li a:hover {
+  background: white;
+  color: black;
+
+  border: 2px solid white !important; /* Add border */
+  border-radius: 50px;
+}
+.hire-me {
+  background: transparent;
+  color: white;
+  border: 2px solid white !important; /* Add border */
+  border-radius: 50px; /* Capsule shape */
+  cursor: pointer;
+  padding: 8px 15px;
+  border: none;
+  cursor: pointer;
+  font-weight: 600;
+  font-family: "Poppins", sans-serif;
+}
+
+/* banner */
+.banner {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+.banner h1 {
+  font-size: 64px;
+  font-weight: 800;
+  text-transform: uppercase;
+  /* font-weight: bold; */
+  font-family: "Syne", sans-serif;
+}
+
+.banner-img {
+  width: 128px;
+  height: 64px;
+  margin: 0 2px;
+  border-radius: 100px;
+  line-height: 80px;
+}
+.banner-section-2 {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  gap: 40px;
+}
+.banner-section-2 div {
+  width: 400px;
+  font-family: "Poppins";
+}
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+  }
+  .banner-section-2 {
+    flex-direction: column;
+  }
+}
