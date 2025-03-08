@@ -17,7 +17,17 @@ h6 {
   font-family: "Syne", sans-serif;
   font-weight: 700;
 }
-
+.title {
+  display: flex;
+  flex-direction: row;
+  gap: "10px";
+  align-items: center;
+  margin-bottom: 2rem;
+}
+.title h3 {
+  font-size: 40px;
+  line-height: 100%;
+}
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -70,11 +80,12 @@ h6 {
   font-weight: 600;
   font-family: "Poppins", sans-serif;
 }
-
+.content {
+  padding: 64px 100px;
+}
 /* banner */
 .banner {
   text-align: center;
-  padding: 50px 20px;
 }
 
 .banner h1 {
@@ -93,6 +104,7 @@ h6 {
   line-height: 80px;
 }
 .banner-section-2 {
+  width: 100%;
   display: flex;
   justify-content: space-evenly;
   align-items: center;
@@ -102,11 +114,103 @@ h6 {
   width: 400px;
   font-family: "Poppins";
 }
+/*expertise  */
+
+.expertise-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 30px;
+}
+.expertise-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 64px;
+  list-style-type: square; /* Adds bullet points */
+  padding-left: 20px;
+}
+
+.expertise-list li {
+  /* background: #121212; */
+  padding: 15px 20px;
+  /* border-radius: 10px;
+  border: 1px solid gray; */
+  margin-bottom: 20px;
+  transition: all 0.3s ease-in-out;
+}
+
+.expertise-list h3 {
+  font-family: "Syne", sans-serif;
+  font-size: 22px;
+  margin-bottom: 10px;
+}
+
+.expertise-list p {
+  font-family: "Poppins", sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: #ccc;
+  line-height: 1.6;
+}
+/* works */
+.card-container {
+  height: 430px;
+  border-radius: 40px;
+  background-color: rgba(203, 203, 203, 0.48);
+  padding: 32px;
+  gap: 32px;
+  margin: 30px 0;
+}
+.card {
+  gap: 32px;
+  display: flex;
+  /* background-color: red; */
+  /* justify-content: space-between; */
+}
+.card img {
+  width: 500px;
+  height: 429px;
+  border-radius: 24px;
+}
+.details-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.card details-div h3 {
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 100%;
+}
+.card details-div p {
+  font-weight: 400;
+  font-size: 18px;
+  /* font-family: ""; */
+}
 @media (max-width: 768px) {
+  .content {
+    padding: auto;
+  }
   .navbar {
     flex-direction: column;
   }
+  .banner h1 {
+    font-size: 32px;
+    width: 100%;
+  }
   .banner-section-2 {
     flex-direction: column;
+  }
+  .expertise-list {
+    grid-template-columns: repeat(1, 1fr);
+  }
+  .card {
+    flex-direction: column;
+    height: fit-content;
+  }
+  .card img {
+    width: 100%;
+  }
+  br {
+    display: none;
   }
 }
