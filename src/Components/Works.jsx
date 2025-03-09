@@ -27,7 +27,7 @@ const worksData = [
 const Works = () => {
   console.log(worksData);
   return (
-    <section>
+    <section className="work">
       <Title title={"Works"}></Title>
       {worksData?.map((item, index) => (
         <div key={index} className="card-container">

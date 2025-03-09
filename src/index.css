@@ -177,6 +177,8 @@ h6 {
   border-radius: 24px;
 }
 .details-div {
+  /* background-color: antiquewhite; */
+  height: 429px;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -395,6 +397,13 @@ h6 {
   }
   .navbar {
     flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
   }
   .banner h1 {
     font-size: 32px;
@@ -411,10 +420,17 @@ h6 {
   .expertise-list {
     grid-template-columns: repeat(1, 1fr);
   }
+  .work {
+    width: 95%;
+    /* background-color: beige; */
+    margin: auto 30px;
+  }
   .card-container {
     display: flex;
     height: max-content;
-    /* margin: 0; */
+    /* width: 80%;
+    margin: 30px 2px; */
+    /* background-color: aqua; */
     flex-direction: column;
 
     justify-content: center;
@@ -426,6 +442,9 @@ h6 {
   }
   .card img {
     width: 100%;
+    height: fit-content;
+  }
+  .details-div {
     height: fit-content;
   }
   .responsive {

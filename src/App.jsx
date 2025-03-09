@@ -12,7 +12,7 @@ import "./index.css";
 function App() {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <div className="content">
         <Banner />
         <Expertise />
